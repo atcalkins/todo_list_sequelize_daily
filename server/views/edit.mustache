@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Edit Todo Item</title>
+  <link rel="stylesheet" href="./stylesheets/styles.css">
+</head>
+<body>
+  {{#todos}}
+  <form action="/edit/{{id}}" method="post">
+    <input type="text" name="retype" value="{{descrption}}">
+    <button type="submit" name="button">Apply Changes</button>
+  </form>
+  {{/todos}}
+</body>
+</html>

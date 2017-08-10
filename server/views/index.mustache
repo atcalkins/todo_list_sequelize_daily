@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>CHANGEME</title>
-    <link rel="stylesheet" href="/public/stylesheets/normalize.css">
-    <link rel="stylesheet" href="/public/stylesheets/styles.css">
-    <script src="/public/javascript/main.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <main>
-        Your Content Here.
-    </main>
-
-    <footer>
-      This page was rendered in {{secondsToRender}}ms.
-    </footer>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Tyler's To Do List</title>
+  <link rel="stylesheet" href="./public/stylesheets/styles.css"
+</head>
+<body>
+  <form id="search" action="/" method="post">
+    <button type="submit">Add A Task To Do</button>
+    <input type="text" name="searchBar" >
+  </form>
+  {{#error}}
+  {{.}}
+  {{/error}}
+  <h1>Incomplete Tasks</h1>
+  <ul>
+    {{#todos}}
+    {{^complete}}
+    <li>
+      <form action="/{{id}}/done" method="post"><button type="submit">Done</button></form>
+      <form action="/{{id}}/delete" method="post"><button type="submit">Delete</button></form>
+      <form action="/edit/{{id}}" method="get"><button type="submit">Edit</button></form>
+      {{descrption}}
+    </li>
+    {{/complete}}
+    {{/todos}}
+  </ul>
+  <h1>Complete Tasks</h1>
+  <ul id="completed">
+    {{#todos}}
+    {{#complete}}
+    <li>
+      <form action="/{{id}}/doAgain" method="post"><button type="submit">Do This Again</button></form>
+      <form action="/{{id}}/delete" method="post"><button type="submit">Delete</button></form>
+      {{descrption}}
+    </li>
+    {{/complete}}
+    {{/todos}}
+  </ul>
+</body>
 </html>

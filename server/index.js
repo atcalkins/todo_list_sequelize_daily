@@ -46,7 +46,7 @@ app.use(morgan("dev"));
 // Setup a session store using express-session
 app.use(
   session({
-    secret: "you-should-REALLY-change-this",
+    secret: "lolololol",
     resave: false,
     saveUninitialized: false
   })
@@ -54,7 +54,7 @@ app.use(
 
 // **************** ROUTES ↓
 
-app.use("/", require("./routes/homepage"));
+app.use("/", require("./routes/todos"));
 
 // **************** ROUTES ↑
 
