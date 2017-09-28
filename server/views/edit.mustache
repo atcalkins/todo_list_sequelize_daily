@@ -8,7 +8,7 @@
 <body>
   {{#todos}}
   <form action="/edit/{{id}}" method="post">
-    <input type="text" name="retype" value="{{descrption}}">
+    <input type="text" name="retype" value="{{description}}">
     <button type="submit" name="button">Apply Changes</button>
   </form>
   {{/todos}}

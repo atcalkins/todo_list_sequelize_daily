@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   Models.todo
     .create({
-      descrption: req.body.searchBar,
+      description: req.body.searchBar,
       complete: false
     })
     .then(() => {
@@ -28,7 +28,7 @@ router.get("/edit/:id", (req, res) => {
 
 router.post("/edit/:id", (req, res) => {
   Models.todo.findById(parseInt(req.params.id)).then(todo => {
-    todo.update({ descrption: req.body.retype }).then(todo => {
+    todo.update({ description: req.body.retype }).then(todo => {
       res.redirect("/");
     });
   });

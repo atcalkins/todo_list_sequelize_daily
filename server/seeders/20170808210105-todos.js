@@ -6,31 +6,31 @@ module.exports = {
       "todos",
       [
         {
-          descrption: "Triple S",
+          description: "Shower",
           complete: false,
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          descrption: "Do Laundry you bum",
+          description: "Do Laundry you bum",
           complete: false,
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          descrption: "Lift things up and put them down",
+          description: "Lift things up and put them down",
           complete: false,
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          descrption: "Make Lunch",
+          description: "Make Lunch",
           complete: false,
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          descrption: "Take Vitamins and Medicine",
+          description: "Take Vitamins and Medicine",
           complete: false,
           createdAt: new Date(),
           updatedAt: new Date()
